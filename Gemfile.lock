@@ -1,8 +1,14 @@
 GIT
-  remote: git://github.com/spree/spree_blue_theme.git
-  revision: 4393678c4126aa835c226f7f88f709e6f769b0cb
+  remote: git@github.com:railsfactory/spree_multi_theme.git
+  revision: c92df1706fbca4049c3b0493e99602f1b867749b
   specs:
-    spree_blue_theme (0.2.0)
+    spree_multi_theme (0.1.0)
+
+PATH
+  remote: spree_granify
+  specs:
+    spree_granify (1.1.1)
+      spree_core (~> 1.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -223,7 +229,8 @@ DEPENDENCIES
   rails (= 3.2.3)
   sass-rails (~> 3.2.3)
   spree
-  spree_blue_theme!
+  spree_granify!
+  spree_multi_theme!
   spree_skrill
   sqlite3
   uglifier (>= 1.0.3)

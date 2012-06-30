@@ -39,4 +39,6 @@ gem 'jquery-rails'
 gem 'spree'
 #gem 'spree_usa_epay'
 gem 'spree_skrill'
-gem 'spree_blue_theme', :git => 'git://github.com/spree/spree_blue_theme.git'
+gem 'spree_multi_theme', :git => 'git@github.com:railsfactory/spree_multi_theme.git'
+gem 'spree_granify', :path => '../spree_granify'
+
