@@ -33,14 +33,15 @@ gem 'jquery-rails'
 
 # Deploy with Capistrano
 # gem 'capistrano'
-
+gem 'deface', '~> 0.9.1'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'spree'
 #gem 'spree_usa_epay'
 gem 'spree_skrill'
-gem 'spree_multi_theme', :git => 'git@github.com:railsfactory/spree_multi_theme.git'
+#gem 'spree_multi_theme', :git => 'git@github.com:railsfactory/spree_multi_theme.git'
 gem 'spree_granify', :path => '../spree_granify'
 
-gem 'unicorn'
+gem 'thin'
+
 
