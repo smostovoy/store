@@ -1,0 +1,1 @@
+Spree::Granify::Config[:consumer_key] =  "YOUR_CONSUMER_KEY"
