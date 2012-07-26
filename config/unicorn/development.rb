@@ -1,4 +1,4 @@
-deploy_to  = "/home/administrator/hypertech.com.ua"
+deploy_to  = "/home/administrator/hypertech"
 rails_root = "#{deploy_to}"
 pid_file   = "#{deploy_to}/shared/pids/unicorn.pid"
 socket_file= "#{deploy_to}/shared/unicorn.sock"
