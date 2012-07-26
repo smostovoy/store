@@ -24,12 +24,7 @@ end
 before_fork do |server, worker|
   defined?(ActiveRecord::Base) and
   
-  begin  
     ActiveRecord::Base.connection.disconnect!
-    $redis.quit
-    $mongo_connection.close
-  rescue
-  end
 
   if File.exists?(old_pid) && server.pid != old_pid
     begin
@@ -43,11 +38,5 @@ end
 after_fork do |server, worker|
   defined?(ActiveRecord::Base) and
   ActiveRecord::Base.establish_connection
-
-  begin
-    $redis = Redis.new(:host => 'localhost', :port => 6379, :db => Rails.env)
-    GMongo::Base.connect
-  rescue
-  end
 
 end
