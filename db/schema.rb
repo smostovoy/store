@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120627142441) do
+ActiveRecord::Schema.define(:version => 20120718142246) do
+
+  create_table "granify_orders", :force => true do |t|
+    t.string   "token"
+    t.integer  "order_id"
+    t.integer  "user_id"
+    t.boolean  "ready_for_sending"
+    t.datetime "sent_at"
+  end
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -555,6 +563,7 @@ ActiveRecord::Schema.define(:version => 20120627142441) do
     t.datetime "remember_created_at"
     t.datetime "reset_password_sent_at"
     t.string   "api_key",                :limit => 48
+    t.string   "granify_token"
   end
 
   add_index "spree_users", ["persistence_token"], :name => "index_users_on_persistence_token"

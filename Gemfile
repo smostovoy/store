@@ -21,18 +21,23 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'unicorn'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :development do
+  gem 'capistrano'
+  #gem "capistrano-ext"
+  gem 'capistrano_colors'
+  gem 'rvm-capistrano'
+  gem 'pry'
+  gem 'awesome_print'
+  gem 'capistrano-unicorn', :require => false
+end
 
-# Deploy with Capistrano
-# gem 'capistrano'
 gem 'deface', '~> 0.9.1'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
@@ -40,8 +45,7 @@ gem 'spree'
 #gem 'spree_usa_epay'
 gem 'spree_skrill'
 #gem 'spree_multi_theme', :git => 'git@github.com:railsfactory/spree_multi_theme.git'
-gem 'spree_granify', :path => '../spree_granify'
+gem 'spree_granify', :git => 'git://github.com/granify/spree_granify.git'
 
-gem 'thin'
 
 
