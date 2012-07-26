@@ -1,5 +1,5 @@
-deploy_to  = "/home/deploy/granify.com"
-rails_root = "#{deploy_to}/current"
+deploy_to  = "/home/administrator/hypertech.com.ua"
+rails_root = "#{deploy_to}"
 pid_file   = "#{deploy_to}/shared/pids/unicorn.pid"
 socket_file= "#{deploy_to}/shared/unicorn.sock"
 log_file   = "#{rails_root}/log/unicorn.log"
